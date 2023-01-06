@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-6">
+            <h2 class="text-primary text-center text-uppercase"> Lista de sliders</h2>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <a asp-action="Create" class="btn btn-success"><i class="fas fa-plus"> Crear Slider</i></a>
+        </div>
+    </div>
+</div>
+<table id="tblSliders" class="table table-striped table-bordered" style="width:100%;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+</table>
+
+@section Scripts{
+    <script src="~/js/Slider.js"></script>
+}

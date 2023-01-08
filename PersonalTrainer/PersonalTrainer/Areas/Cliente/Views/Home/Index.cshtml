@@ -9,10 +9,13 @@
             @{ int cont = 0;}
             @foreach (var item in Model.Slider)
             {
-                var itemDinamico = cont++ == 0 ? "item active" : "item";
-                <div class="carousel-item @itemDinamico">
-                    <img class="d-block w-100" src="@Url.Content(item.ImagenUrl)" alt="slider">
-                </div>
+                if (item.Estado == true)
+                {
+                    var itemDinamico = cont++ == 0 ? "item active" : "item";
+                    <div class="carousel-item @itemDinamico">
+                        <img class="d-block w-100" src="@Url.Content(item.ImagenUrl)" alt="slider">
+                    </div>
+                }
 
             }
         </div>
@@ -26,17 +29,38 @@
         </a>
     </div>
 </header>
-@*<section class="mt-5 container">
+<section class="mt-5 container">
     <div class="row">
         <div class="col-12">
             <h3 class="text-white text-uppercase text-center">Yo te ayudare a alcanzar tu mejor estado fisico.</h3>
         </div>
     </div>
     <div class="row">
-        
-        
+        <div class="col-4">
+            <div class="d-grid">
+                <img src="~/imagenes/icons8-garantía-90.png" class="m-auto mt-5 mb-3" />
+                <h5 class="h4 text-center text-white mb-2">Ganrantía</h5>
+                <p class="text-uppercase text-white text-center">Lorem ipsum dolor sit amet. At nihil quos et culpa sint qui error Quis ex ipsum omnis sit voluptatem dolores qui sint dolorum! Non saepe rerum non quisquam aperiam eum deserunt dolor.</p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="d-grid">
+                <img src="~/imagenes/icons8-peso-muerto-100.png" class="m-auto mt-5 mb-3" />
+                <h5 class="h4 text-center text-white mb-2">Seguimiento</h5>
+                <p class="text-uppercase text-white text-center">Lorem ipsum dolor sit amet. At nihil quos et culpa sint qui error Quis ex ipsum omnis sit voluptatem dolores qui sint dolorum! Non saepe rerum non quisquam aperiam eum deserunt dolor.</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-grid">
+                <img src="~/imagenes/icons8-reloj-100 (1).png" class="m-auto mt-5 mb-3" />
+                <h5 class="h4 text-center text-white mb-2">Rutinas semanales</h5>
+                <p class="text-uppercase text-white text-center">Lorem ipsum dolor sit amet. At nihil quos et culpa sint qui error Quis ex ipsum omnis sit voluptatem dolores qui sint dolorum! Non saepe rerum non quisquam aperiam eum deserunt dolor.</p>
+            </div>
+        </div>
+
     </div>
-</section>*@
+</section>
 
 
 
